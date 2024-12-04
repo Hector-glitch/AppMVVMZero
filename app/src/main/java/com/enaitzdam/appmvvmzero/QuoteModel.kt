@@ -1,3 +1,3 @@
 package com.enaitzdam.appmvvmzero
 
-data class QuoteModel (val quote:String, val author:String)
+data class AlumneModel (val nom:String, val edat:Int)

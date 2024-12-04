@@ -10,36 +10,41 @@
         android:background="@color/fons"
         tools:context=".HomeFragment">
 
-        <TextView
-            android:id="@+id/tvQuote"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Frase"
-            android:textColor="@color/black"
-            android:textSize="36sp"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEdat"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="128dp"
+            android:hint="Edat"
+            app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.349" />
+            tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/tvAuthor"
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/editTextEdat"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:inputType="text"
+                android:textColorHint="#757575" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="80dp"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Autor"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="italic"
+            android:text="Count"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputEdat"
+            app:layout_constraintVertical_bias="0.08"
+            tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

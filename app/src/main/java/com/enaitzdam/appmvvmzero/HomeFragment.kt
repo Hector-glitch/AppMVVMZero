@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.enaitzdam.appmvvmzero.databinding.FragmentHomeBinding
 
 
@@ -23,10 +23,11 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater)
 
-        binding.viewContainer.setOnClickListener {
-            viewModel.randomQuote()
-            binding.tvQuote.text = viewModel.frase
-            binding.tvAuthor.text = viewModel.autor
+        binding.buttonCount.setOnClickListener {
+            var edat = binding.editTextEdat.text.toString().toInt()
+            viewModel.countAges(edat)
+            var count = viewModel.contadorAlumnesEdat
+            Toast.makeText( context, count.toString() , Toast.LENGTH_SHORT).show()
         }
 
 
